@@ -1,0 +1,78 @@
+{
+    "pylver": "v3.2",
+    "accesskey": "{{api key}}",
+    "erid": "Enterprise generated ID",
+    "pyl": {
+        "messages": [
+            {
+                "chnl": "Channel name", //RCS, SMS, Truecaller, WhatsApp
+                "oa": "Sender Phone number", //Agent ID, WhatsApp Number, Sender ID, Truecaller Number
+                "message": {
+                    "vp": 40000,
+                    "urlsh": true, //false
+                    "type": "interactive", //interactive message
+                    "interactive": {
+                        "header": {
+                            "type": "image", // header with image, doc, video
+                            "image": {
+                                "id": "051019000910008738758816" //link
+                                
+                            }
+                        },
+                        "action": {
+                            "type": "buttons",
+                            "buttons": [
+                                {
+                                   "type": "type of button", //reply, deeplink, queryloc,
+                                    "location": {
+                                        "title": "Title of a location",
+                                        "query": "Name of a country or city"
+                                    },
+                                    "payload": "contains payload data"
+                                },
+                                {
+                                    "type": "type of button", //reply, deeplink, queryloc,
+                                    "reply": {
+                                        "title": "Enter a title for reply"
+                                    },
+                                    "payload": "contains payload data"
+                                },
+                                {
+                                    "type": "type of button", //reply, deeplink, queryloc,
+                                    "deeplink": {
+                                        "title": "Title of a link",
+                                        "link": "https://www.pizzahut.co.in/"
+                                    },
+                                    "payload": "contains payload data"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "recipients": [
+                    {
+                        "uid": "user id of a recipient",
+                        "cc": "2 char ISO country code",
+                        "da": "recipient phone number",
+                        "tags": [
+                            {
+                                "key1": "value1",
+                                "key2": "value2"
+                            }
+                        ],
+                        "flbk": false
+                    }
+                ]
+            }
+        ],
+        "metadata": {
+            "cburl": "webhook url",
+            "tags": [
+                {
+                    "key1": "value1",
+                    "key2": "value2"
+                }
+            ]
+        }
+    }
+}
